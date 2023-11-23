@@ -1,6 +1,6 @@
 {
   "name": "advent-of-code",
-  "version": "2015.8.1",
+  "version": "2015.8.2",
   "description": "Solutions for Advent of Code",
   "private": true,
   "author": "Alessandro Bianco <code@alebianco.dev>",
