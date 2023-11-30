@@ -1,0 +1,13 @@
+{
+  "name": "@advent-of-code/utils",
+  "version": "1.0.0",
+  "description": "Utils used to solve Advent of Code puzzles",
+  "private": true,
+  "author": "Alessandro Bianco <code@alebianco.dev>",
+  "license": "unlicense",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
