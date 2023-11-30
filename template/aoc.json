@@ -1,0 +1,6 @@
+{
+    "commands": [
+        "clear",
+        "node wip.js"
+    ]
+}
