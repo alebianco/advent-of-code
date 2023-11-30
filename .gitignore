@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+package-lock.json
+input.txt
+wip.js
+!template/wip.js
