@@ -1,4 +1,5 @@
 export * from './is-iterable.js'
+export * from './map.js'
 export * from './max.js'
 export * from './min.js'
 export * from './partition.js'
