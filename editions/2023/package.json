@@ -1,0 +1,25 @@
+{
+  "name": "@advent-of-code/2023",
+  "version": "1.0.0",
+  "description": "Solutions for Advent of Code 2023",
+  "private": true,
+  "author": "Alessandro Bianco <code@alebianco.dev>",
+  "license": "unlicense",
+  "type": "module",
+  "config": {
+    "aoc": {
+      "template": "../../../template"
+    }
+  },
+  "scripts": {
+    "play": "cd src && aoc --year 2023 --day ",
+    "solve": "cd src && aoc start ${npm_package_config_aoc_template} 2023 --day ",
+    "bench": "node src/bench.js"
+  },
+  "dependencies": {
+    "@advent-of-code/utils": "*"
+  },
+  "devDependencies": {
+    "@jakzo/aoc": "1.2.0"
+  }
+}
