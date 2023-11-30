@@ -10,8 +10,8 @@
   "exports": {
     ".": "./src/index.js",
     "./bench": "./src/bench/index.js",
-    "./debug": "./src/debug/index.js",
     "./collections": "./src/collections/index.js",
+    "./debug": "./src/debug/index.js",
     "./iterables": "./src/iterables/index.js",
     "./numbers": "./src/numbers/index.js",
     "./points": "./src/points/index.js",
