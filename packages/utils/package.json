@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
+    "./bench": "./src/bench/index.js",
     "./debug": "./src/debug/index.js",
     "./numbers": "./src/numbers/index.js",
     "./promise": "./src/promise/index.js",
