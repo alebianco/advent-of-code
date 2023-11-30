@@ -12,7 +12,16 @@ export * from './permutations.js'
 export * from './power-set.js'
 export * from './range.js'
 export * from './reduce.js'
+export * from './sorted.js'
 export * from './sum.js'
 export * from './take.js'
 export * from './to-array.js'
 export * from './unique.js'
+
+/**
+ * @callback Comparator
+ * @template T
+ * @param {T} a
+ * @param {T} b
+ * @returns {number}
+ */
