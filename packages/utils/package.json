@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
+    "./numbers": "./src/numbers/index.js",
     "./strings": "./src/strings/index.js"
   }
 }
