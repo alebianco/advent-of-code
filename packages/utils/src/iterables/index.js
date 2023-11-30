@@ -1,5 +1,6 @@
 export * from './cartesian.js'
 export * from './combinations.js'
+export * from './cycle.js'
 export * from './is-iterable.js'
 export * from './map.js'
 export * from './max.js'
