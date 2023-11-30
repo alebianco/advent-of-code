@@ -15,6 +15,7 @@ export * from './reduce.js'
 export * from './sorted.js'
 export * from './sum.js'
 export * from './take.js'
+export * from './take-while.js'
 export * from './to-array.js'
 export * from './unique.js'
 
@@ -24,4 +25,11 @@ export * from './unique.js'
  * @param {T} a
  * @param {T} b
  * @returns {number}
+ */
+
+/**
+ * @callback Predicate
+ * @template T
+ * @param {T} value
+ * @returns {boolean}
  */
