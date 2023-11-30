@@ -3,7 +3,7 @@ import { Presets, SingleBar } from 'cli-progress'
 import prettyTime from 'pretty-time'
 import { restoreConsole, silenceConsole } from '@advent-of-code/utils/debug'
 import { formatWithSIPrefix } from '@advent-of-code/utils/numbers'
-import { truncate } from '@advent-of-code/utils/strings'
+import { toTitleCase, truncate } from '@advent-of-code/utils/strings'
 import { listSolutions } from './list-solutions.js'
 import { Deferred } from '../promise/index.js'
 
@@ -65,8 +65,8 @@ export class Runner {
             results.push({
               day,
               part,
-              variant,
-              speed: `${formatWithSIPrefix(hz)} ops/sec`,
+              variant: truncate(toTitleCase(variant), 20),
+              speed: formatWithSIPrefix(hz, ' ops/sec'),
               'solve time': `${prettyTime([mean | 0, (mean * 1e9) | 0])}`,
               'error margin': `±${rme.toFixed(2)}%`,
               samples: sample.length,
