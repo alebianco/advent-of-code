@@ -80,7 +80,7 @@ export class PuzzleInput {
 
   /**
    * @template T
-   * @param {function(string):T} transform
+   * @param {function(string, number):T} transform
    * @param {number} [numLines]
    * @return {T[]}
    */
