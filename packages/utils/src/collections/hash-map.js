@@ -72,12 +72,13 @@ export class HashMap {
    * @return {IterableIterator<[K, V]>}
    */
   entries () {
-    return function * () {
-      const keys = this.#keys.entries()
+    function * entriesGenerator (keys, elements) {
       for (const [hash, key] of keys) {
-        yield [key, this.#elements.get(hash)]
+        yield [key, elements.get(hash)]
       }
     }
+
+    return entriesGenerator(this.#keys.entries(), this.#elements)
   }
 
   /**
