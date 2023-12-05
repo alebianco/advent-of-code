@@ -1,4 +1,5 @@
 export * from './cartesian.js'
+export * from './chunked.js'
 export * from './combinations.js'
 export * from './cycle.js'
 export * from './filter.js'
