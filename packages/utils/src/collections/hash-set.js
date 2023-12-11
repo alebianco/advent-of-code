@@ -60,12 +60,9 @@ export class HashSet {
   /**
    * @return {IterableIterator<[V, V]>}
    */
-  entries () {
-    return iter
-
-    function * iter () {
-      const values = this.values()
-      for (const v of values) yield [v, v]
+  * entries () {
+    for (const value of this.#elements.values()) {
+      yield [value, value]
     }
   }
 
