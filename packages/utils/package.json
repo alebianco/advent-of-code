@@ -16,6 +16,7 @@
     "./iterables": "./src/iterables/index.js",
     "./numbers": "./src/numbers/index.js",
     "./points": "./src/points/index.js",
+    "./polygons": "./src/polygons/index.js",
     "./promise": "./src/promise/index.js",
     "./strings": "./src/strings/index.js"
   }
