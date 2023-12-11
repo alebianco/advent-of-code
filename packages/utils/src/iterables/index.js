@@ -20,6 +20,7 @@ export * from './take.js'
 export * from './take-while.js'
 export * from './to-array.js'
 export * from './unique.js'
+export * from './zip.js'
 
 /**
  * @callback Comparator
