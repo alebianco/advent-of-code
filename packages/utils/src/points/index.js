@@ -1,3 +1,4 @@
+export * from './neighbours.js'
 export * from './sum-point.js'
 
 /**
