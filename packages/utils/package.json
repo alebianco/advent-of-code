@@ -13,6 +13,7 @@
     "./bitwise": "./src/bitwise/index.js",
     "./collections": "./src/collections/index.js",
     "./debug": "./src/debug/index.js",
+    "./functions": "./src/functions/index.js",
     "./iterables": "./src/iterables/index.js",
     "./numbers": "./src/numbers/index.js",
     "./points": "./src/points/index.js",
