@@ -146,7 +146,7 @@ export class PuzzleInput {
    * @return {PuzzleInput}
    */
   subLines (startLine, numLines = undefined) {
-    const lines = this.lines().slice(startLine, numLines)
+    const lines = this.lines().slice(startLine, numLines ? startLine + numLines : undefined)
     return new PuzzleInput(lines)
   }
 
