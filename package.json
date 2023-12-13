@@ -1,6 +1,6 @@
 {
   "name": "advent-of-code",
-  "version": "2023.12.2",
+  "version": "2023.13.1",
   "description": "Solutions for Advent of Code",
   "private": true,
   "author": "Alessandro Bianco <code@alebianco.dev>",
@@ -11,7 +11,7 @@
     "precommit": "lint-staged --verbose --allow-empty",
     "play": "npm run --workspace editions/${npm_package_config_aoc_year} play ${npm_package_config_aoc_day}",
     "solve": "npm run --workspace editions/${npm_package_config_aoc_year} solve ${npm_package_config_aoc_day}",
-    "leaderboard": "aoc leaderboard 439401 --year ${npm_package_config_aoc_year}"
+    "leaderboard": "aoc leaderboard 439401 --year ${npm_packafge_config_aoc_year}"
   },
   "workspaces": {
     "packages": [
@@ -22,7 +22,7 @@
   "config": {
     "aoc": {
       "year": "2023",
-      "day": "12"
+      "day": "13"
     }
   },
   "lint-staged": {
