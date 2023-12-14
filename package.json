@@ -1,6 +1,6 @@
 {
   "name": "advent-of-code",
-  "version": "2023.13.2",
+  "version": "2023.14.1",
   "description": "Solutions for Advent of Code",
   "private": true,
   "author": "Alessandro Bianco <code@alebianco.dev>",
@@ -22,7 +22,7 @@
   "config": {
     "aoc": {
       "year": "2023",
-      "day": "13"
+      "day": "14"
     }
   },
   "lint-staged": {
