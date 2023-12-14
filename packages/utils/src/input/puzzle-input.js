@@ -9,6 +9,7 @@
 import { lstatSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { inspect } from 'util'
 
 /**
  * Raw content for the source
@@ -40,6 +41,10 @@ export class PuzzleInput {
       const eol = source?.eol || '\n'
       this.#lines = readFileSync(filename, { encoding }).trimEnd().split(eol)
     }
+  }
+
+  get [Symbol.toStringTag] () {
+    return this.constructor.name
   }
 
   /**
@@ -196,6 +201,32 @@ export class PuzzleInput {
     return new PuzzleInput(inverted.map((line) => line.join('')))
   }
 
+  rotateCCW () {
+    const grid = this.lineFields('')
+    const rows = this.rowsCount()
+    const cols = this.colsCount()
+    const rotated = Array.from({ length: rows }, () => new Array(cols))
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        rotated[cols - j - 1][i] = grid[i][j]
+      }
+    }
+    return new PuzzleInput(rotated.map(line => line.join('')))
+  }
+
+  rotateCW () {
+    const grid = this.lineFields('')
+    const rows = this.rowsCount()
+    const cols = this.colsCount()
+    const rotated = Array.from({ length: rows }, () => new Array(cols))
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        rotated[j][rows - i - 1] = grid[i][j]
+      }
+    }
+    return new PuzzleInput(rotated.map(line => line.join('')))
+  }
+
   /**
    * @param {number} col
    * @param {string} charToCount
@@ -212,5 +243,17 @@ export class PuzzleInput {
    */
   filterOnColValue (col, value) {
     return this.linesMatching((line) => line[col] === value)
+  }
+
+  toString () {
+    return `${this[Symbol.toStringTag]} [rows=${this.rowsCount()}, cols=${this.colsCount()}]`
+  }
+
+  valueOf () {
+    return this.#lines.join('\n')
+  }
+
+  [inspect.custom] (depth, opts) {
+    return `${this.toString()}\n${this.valueOf()}`
   }
 }
