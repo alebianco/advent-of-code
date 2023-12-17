@@ -170,6 +170,20 @@ export class PuzzleInput {
   }
 
   /**
+   * @template T
+   * @param {function(string):T} [transformer]
+   * @return {Generator<[Point2, string]>}
+   */
+  * grid (transformer = (value) => value) {
+    for (let r = 0; r < this.#lines.length; r++) {
+      const line = this.#lines[r]
+      for (let c = 0; c < line.length; c++) {
+        yield [[c, r], transformer(line[c])]
+      }
+    }
+  }
+
+  /**
    * @param {number} row
    * @param {number} col
    * @return {string}
