@@ -1,3 +1,4 @@
+export * from './coincident-point.js'
 export * from './neighbours.js'
 export * from './sum-point.js'
 
