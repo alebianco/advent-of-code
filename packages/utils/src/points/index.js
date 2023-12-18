@@ -3,6 +3,7 @@ export * from './dot-product.js'
 export * from './is-in-polygon.js'
 export * from './multiply-point.js'
 export * from './neighbours.js'
+export * from './scale-point.js'
 export * from './sum-point.js'
 
 /**
