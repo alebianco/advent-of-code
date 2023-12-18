@@ -1,5 +1,6 @@
 export * from './coincident-point.js'
 export * from './dot-product.js'
+export * from './is-in-polygon.js'
 export * from './multiply-point.js'
 export * from './neighbours.js'
 export * from './sum-point.js'
