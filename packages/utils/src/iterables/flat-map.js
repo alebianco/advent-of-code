@@ -1,3 +1,5 @@
+import { isIterable } from './is-iterable.js'
+
 /**
  * @template T
  * @template U
@@ -7,6 +9,11 @@
  */
 export function * flatMap (source, transform) {
   for (const element of source) {
-    yield * transform(element)
+    const value = transform(element)
+    if (isIterable(value)) {
+      yield * value
+    } else {
+      yield value
+    }
   }
 }
